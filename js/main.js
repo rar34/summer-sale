@@ -21,7 +21,10 @@ for (const card of cards) {
         totalPrice += price;
         console.log(totalPrice)
         const currentPriceElement = document.getElementById('current-price');
+        const payablePriceField = document.getElementById('payable-price');
         currentPriceElement.innerText = totalPrice.toFixed(2);
+        payablePriceField.innerText = totalPrice.toFixed(2);
+
         // const currentPriceText = currentPriceElement.innerText;
         // const currentPrice = parseFloat(currentPriceText);
         // console.log(currentPrice)
@@ -72,3 +75,9 @@ makePurchaseButton.addEventListener('click', function(){
     }
 })
 
+
+// go home
+
+document.getElementById('btn-go-home').addEventListener('click', function(){
+    window.location.href = 'index.html'
+})
